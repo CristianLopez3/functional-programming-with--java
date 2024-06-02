@@ -16,8 +16,6 @@ public class FP02Structured {
 	}
 
 	private static int addListStructured(List<Integer> numbers) {
-		//how to loop?
-		//how to store the sum?
 		int sum = 0;
 		for(int number:numbers) {
 			sum += number;
