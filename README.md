@@ -9,6 +9,7 @@ Let's dive into some concepts:
 * [`Lambdas`](./docs/lambdas.md)
 * [`Stream`](./docs/stream.md)
 * [`Method Reference`](./docs/method_reference.md)
+* [`Functional Interfaces`](./docs/functional_interfaces.md)
 
 ### What is Functional Programming?
 

@@ -30,24 +30,23 @@ Analogy example:
 
 ## Important Methods
 
-| Método               | Descripción                                                                 |
-|----------------------|-----------------------------------------------------------------------------|
-| `filter(Predicate<T> predicate)` | Filtra los elementos del stream según un predicado dado.                       |
-| `map(Function<T, R> mapper)`     | Transforma cada elemento del stream aplicando una función dada.                |
-| `flatMap(Function<T, Stream<R>> mapper)` | Transforma cada elemento en un stream y los aplana en un único stream.     |
-| `distinct()`         | Elimina elementos duplicados del stream.                                     |
-| `sorted()`           | Ordena los elementos del stream de acuerdo a su orden natural.               |
-| `sorted(Comparator<T> comparator)` | Ordena los elementos del stream utilizando un comparador dado.                  |
-| `peek(Consumer<T> action)`       | Realiza una operación con cada elemento del stream sin modificar el stream.    |
-| `limit(long maxSize)`            | Limita el número de elementos en el stream.                                      |
-| `skip(long n)`                  | Omite los primeros `n` elementos del stream.                                    |
-| `forEach(Consumer<T> action)`    | Realiza una acción para cada elemento del stream (operación terminal).          |
-| `toArray()`                      | Devuelve un array que contiene los elementos del stream.                        |
-| `reduce(BinaryOperator<T> accumulator)` | Reduce los elementos del stream a un solo valor usando un acumulador.          |
-| `collect(Collector<T, A, R> collector)` | Acumula los elementos del stream en una colección, lista, mapa, etc.         |
-| `anyMatch(Predicate<T> predicate)` | Devuelve `true` si algún elemento del stream coincide con el predicado dado.      |
-| `allMatch(Predicate<T> predicate)` | Devuelve `true` si todos los elementos del stream coinciden con el predicado dado. |
-| `noneMatch(Predicate<T> predicate)` | Devuelve `true` si ningún elemento del stream coincide con el predicado dado.     |
-| `findFirst()`                   | Devuelve un `Optional` con el primer elemento del stream, si existe.             |
-| `findAny()`                     | Devuelve un `Optional` con algún elemento del stream, si existe.                 |
-| `count()`                       | Devuelve el número de elementos en el stream (operación terminal).               |
+| Method             | Description                                                                           |
+|--------------------|---------------------------------------------------------------------------------------|
+| `filter`           | Filters the elements of the stream based on a given predicate.                        |
+| `map`              | Transforms each element of the stream into another form using a given function.       |
+| `flatMap`          | Transforms each element into a stream and then flattens these streams into one.       |
+| `sorted`           | Sorts the elements of the stream based on a comparator or natural order.              |
+| `distinct`         | Removes duplicate elements from the stream.                                           |
+| `limit`            | Truncates the stream to contain no more than a given number of elements.              |
+| `skip`             | Skips the first given number of elements in the stream.                               |
+| `forEach`          | Performs an action for each element of the stream.                                     |
+| `collect`          | Accumulates the elements of the stream into a collection or other mutable result.      |
+| `reduce`           | Reduces the elements of the stream to a single value using an associative accumulation function. |
+| `anyMatch`         | Returns `true` if any elements of the stream match the given predicate.               |
+| `allMatch`         | Returns `true` if all elements of the stream match the given predicate.               |
+| `noneMatch`        | Returns `true` if no elements of the stream match the given predicate.                |
+| `findFirst`        | Returns the first element of the stream, if present.                                  |
+| `findAny`          | Returns any element of the stream, if present.                                        |
+| `count`            | Returns the count of elements in the stream.                                          |
+_| `peek`             | Performs an action for each element of the stream and returns a stream of the same elements. |_
+

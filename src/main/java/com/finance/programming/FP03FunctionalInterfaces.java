@@ -7,73 +7,51 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class FP03FunctionalInterfaces {
-	
-	/*
-	 
-	 boolean isEven(int x) {
-	 	return x%2==0;
-	 }
-	 
-	 int squared(int x) {
-	 	return x * x;
-	 }
-	  
-	 */
+
+	private static List<Integer> numbers = List.of(12, 9, 13, 4, 6, 2, 4, 12, 15);
 
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {
-		
-		List<Integer> numbers = List.of(12, 9, 13, 4, 6, 2, 4, 12, 15);
-				
-		Predicate<Integer> isEvenPredicate = x -> x%2==0;
-		
-		Predicate<Integer> isEvenPredicate2 = new Predicate<Integer>() {
+
+		Predicate<Integer> filter = number -> number % 2 == 0;
+		Predicate<Integer> filter2 = new Predicate<Integer>() {
 			@Override
-			public boolean test(Integer x) {
-				return x%2==0;
+			public boolean test(Integer number) {
+				return number % 2 == 0;
 			}
-			
 		};
 
-		Function<Integer, Integer> squareFunction = x -> x * x;
-		
-		Function<Integer, Integer> squareFunction2 = new Function<Integer, Integer>() {
+		Function<Integer, Integer> mapper = number -> number * number;
+		Function<Integer, Integer> mapper2 = new Function<Integer, Integer>() {
 			@Override
-			public Integer apply(Integer x) {
-				return x*x;
-			}
-			
-		};
-		
-		
-		Consumer<Integer> sysoutConsumer = System.out::println;
-		
-		Consumer<Integer> sysoutConsumer2 = new Consumer<Integer>() {
-			public void accept(Integer x) {
-				System.out.println(x);
+			public Integer apply(Integer number) {
+				return number * number;
 			}
 		};
-		
+
+		Consumer<Integer> consumer = System.out::println;
+		Consumer<Integer> consumer2 = new Consumer<Integer>() {
+			@Override
+			public void accept(Integer integer) {
+				System.out.println(integer);
+			}
+		};
+
 		numbers.stream()
-			.filter(isEvenPredicate2)
-			.map(squareFunction2)
-			.forEach(sysoutConsumer2);
+				.filter(filter2)
+				.map(mapper2)
+				.forEach(consumer2);
 
-		BinaryOperator<Integer> sumBinaryOperator = Integer::sum;
-		//BinaryOperator<Integer> sumBinaryOperator = (x,y) => x + y;
-		
-		
-		BinaryOperator<Integer> sumBinaryOperator2 = new BinaryOperator<Integer>() {
+
+		BinaryOperator<Integer> reducer = Integer::sum;
+		BinaryOperator<Integer> reducer2 = new BinaryOperator<Integer>() {
 			@Override
 			public Integer apply(Integer a, Integer b) {
-				// TODO Auto-generated method stub
 				return a + b;
 			}
-			
 		};
-		
-		
-		int sum = numbers.stream()
-			.reduce(0, sumBinaryOperator);
+		int sum = numbers.stream().reduce(0, reducer2);
+
 	}
+
 }
