@@ -97,6 +97,10 @@ public class FP04CustomClass {
 
     }
 
+    public static Predicate<Course> createPredicateWithCuttingScore(int score){
+        return course -> course.getReviewScore() > score;
+    }
+
 
     public static void mapToHash(List<Course> courses) {
         System.out.println(courses.stream()
@@ -139,7 +143,8 @@ public class FP04CustomClass {
 
 
     public static void reviewIfAllTheCoursesHaveAScoreGreaterThan(List<Course> courses, int score) {
-        Predicate<Course> reviewScoreGreaterThan = course -> course.getReviewScore() > score;
+        Predicate<Course> reviewScoreGreaterThan = createPredicateWithCuttingScore(score);
+
         System.out.println(
                 courses.stream()
                         .noneMatch(reviewScoreGreaterThan)
