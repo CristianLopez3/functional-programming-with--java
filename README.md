@@ -1,8 +1,22 @@
-# Functional Programming With Java
+#  🌟 Functional Programming With Java 
+
+Hey, welcome to my repository to learning functional programming with java with the course of "@in28Minutes" in udemy...
+
+>[!NOTE]
+> Go ahead and check the code, probably you will find something interesting or probably no...
 
 
+### 🖋 ️Use this repo
 
-### Content
+**clone the repo** with the next commands:
+
+```shell
+git clone https://github.com/CristianLopez3/functional-programming-with--java.git functional-programming
+cd functional-programming
+```
+
+
+### 📚 Content
 
 Let's dive into some concepts:
 
