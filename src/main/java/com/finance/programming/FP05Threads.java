@@ -1,7 +1,6 @@
 package com.finance.programming;
 
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class FP05Threads {
 

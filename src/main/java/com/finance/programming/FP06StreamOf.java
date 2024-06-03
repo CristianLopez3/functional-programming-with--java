@@ -1,12 +1,10 @@
 package com.finance.programming;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
 public class FP06StreamOf {
-
 
 
     public static void main(String[] args) {
