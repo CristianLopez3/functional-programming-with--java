@@ -28,7 +28,7 @@ Description: Take a list of strings and use map to convert all strings to upperc
 ✔️ **Exercise 8: Reducing a list**
 Description: Use reduce to sum all the elements of a list of integers.
 
-❌ **Exercise 9: Using flatMap**
+✔️ **Exercise 9: Using flatMap**
 Description: Take a list of lists of integers and use flatMap to convert it into a flat list of integers.
 
 ❌ **Exercise 10: Sorting a list**
