@@ -31,10 +31,10 @@ Description: Use reduce to sum all the elements of a list of integers.
 ✔️ **Exercise 9: Using flatMap**
 Description: Take a list of lists of integers and use flatMap to convert it into a flat list of integers.
 
-❌ **Exercise 10: Sorting a list**
+✔️ **Exercise 10: Sorting a list**
 Description: Sort a list of strings in reverse alphabetical order using streams.
 
-❌ **Exercise 11: Using collect**
+✔️ **Exercise 11: Using collect**
 Description: Convert a list of strings into a single comma-separated string using Collectors.joining.
 
 ❌ **Exercise 12: Creating an infinite Stream**
