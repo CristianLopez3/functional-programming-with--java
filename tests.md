@@ -39,7 +39,7 @@ Description: Convert a list of strings into a single comma-separated string usin
 ✔️ **Exercise 12: Creating an infinite Stream**
 Description: Use Stream.iterate to create an infinite stream of even numbers and take the first 10 elements.
 
-❌ **Exercise 13: Using Optional**
+✔️ **Exercise 13: Using Optional**
 Description: Use Optional to handle the possibility of null values when retrieving an element from a list.
 
 ❌ **Exercise 14: Function composition**

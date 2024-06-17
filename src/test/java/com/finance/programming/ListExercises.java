@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -65,5 +66,22 @@ public class ListExercises {
 
         );
     }
+
+    @Test
+    void testOptional(){
+
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8);
+        Optional<Integer> integer =  numbers.stream()
+                .max(Comparator.naturalOrder());
+
+        int expected = 8;
+
+        int actual = integer.orElseThrow(() -> new RuntimeException("No value found"));
+
+        assertEquals(expected, actual);
+
+    }
+
+
 
 }
