@@ -21,7 +21,6 @@ Description: Define a Supplier that returns a random string of 10 characters.
 ✔️ **Exercise 6: Filtering a list**
 Description: Filter a list of integers to keep only the even numbers using streams and Predicate.
 
-
 ✔️ **Exercise 7: Mapping a list**
 Description: Take a list of strings and use map to convert all strings to uppercase.
 
@@ -37,7 +36,7 @@ Description: Sort a list of strings in reverse alphabetical order using streams.
 ✔️ **Exercise 11: Using collect**
 Description: Convert a list of strings into a single comma-separated string using Collectors.joining.
 
-❌ **Exercise 12: Creating an infinite Stream**
+✔️ **Exercise 12: Creating an infinite Stream**
 Description: Use Stream.iterate to create an infinite stream of even numbers and take the first 10 elements.
 
 ❌ **Exercise 13: Using Optional**
